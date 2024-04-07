@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MotorCA-Web/1.0.0": {
+        "runtime": {
+          "MotorCA-Web.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MotorCA-Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

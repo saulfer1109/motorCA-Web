@@ -1,0 +1,87 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Motor de CA animacion</h1>
+    <button class="boton" id="horario">Horario</button>
+    <button class="boton" id="antihorario">Antihorario</button>
+    <button class="boton" id="detener">Detener</button>
+</div>
+<img id="imagen-gif" src="https://github.com/saulfer1109/motorCA-Web/blob/main/detener.gif?raw=true" alt="Motor Detenido">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    /* Contenedor de botones */
+
+    .controles {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    /* Botones */
+
+    .boton {
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .boton:hover {
+            background-color: #f0f0f0;
+        }
+
+    /* Imagen GIF */
+
+    #imagen-gif {
+        display: block;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    /* Estados de los botones */
+
+    #horario:active {
+        background-color: #99ff99;
+    }
+
+    #antihorario:active {
+        background-color: #ff9999;
+    }
+
+    #detener:active {
+        background-color: #ccc;
+    }
+
+
+</style>
+
+<script>
+    const imagenes = {
+        horario: "https://github.com/saulfer1109/motorCA-Web/blob/main/horario.gif?raw=true",
+        antihorario: "https://github.com/saulfer1109/motorCA-Web/blob/main/antihorario.gif?raw=true",
+        detener: "https://github.com/saulfer1109/motorCA-Web/blob/main/detener.gif?raw=true"
+    };
+
+    const botones = document.querySelectorAll(".boton");
+    const imagenGif = document.getElementById("imagen-gif");
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+            imagenGif.src = imagenes[boton.id];
+        });
+    });
+
+
+</script>
